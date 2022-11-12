@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Footer from "./component/Footer";
 import Header from "./component/Header";
 import Todos from "./component/Todos";
 
@@ -29,6 +30,7 @@ function App() {
     <div>
       <Header title="My Todos List" />
       <Todos todos={todos} onDelete={onDelete}/>
+      <Footer/>
     </div>
   );
 }
