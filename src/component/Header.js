@@ -1,10 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function Header() {
+
+export default function Header(props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/">Todos</a>
+                <a className="navbar-brand" href="/">{props.title}</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -14,7 +16,7 @@ export default function Header() {
                             <a className="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">About</a>
+                            <a className="nav-link active" href="#">About</a>
                         </li>
                     </ul>
                     <form className="d-flex">
@@ -25,4 +27,8 @@ export default function Header() {
             </div>
         </nav>
     )
+}
+
+Header.propTypes={
+    title: PropTypes.string.isRequired
 }
