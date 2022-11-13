@@ -22,7 +22,6 @@ function App() {
   }
 
   const addTodo = (title, desc) => {
-    // console.log(title,desc);
     let sno;
     if (todos.length === 0) {
       sno = 1
@@ -34,7 +33,6 @@ function App() {
       title: title,
       desc: desc
     }
-    // console.log(myTodo); 
     setTodos([...todos, myTodo]);
   }
   const [todos, setTodos] = useState(initTodo);
